@@ -4,6 +4,9 @@ platform :ios, '11.0'
 target 'windmill' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+	
+	# Specify project name
+	project 'windmill.xcodeproj'
 
   # Pods for windmill
   pod 'GoogleSignIn'

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>ROOT_URL</key>
-	<string>http://liam.local:8080</string>
+	<string>http://localhost:8080</string>
 	<key>BUCKET_URL</key>
-	<string>https://windmill-warehouse.s3.us-east-2.amazonaws.com</string>
+	<string>https://b33bop-ios.s3.us-east-1.amazonaws.com</string>
 	<key>GOOGLE_CLIENT_ID</key>
-	<string>672331689068-91gdqeo39rjtu7qlno5i1it80of553e0.apps.googleusercontent.com</string>
+	<string>1081701033436-ucprc2o71tq4eorbqco50gpfd6a15413.apps.googleusercontent.com</string>
 	<key>APP_BUNDLE_ID</key>
 	<string>io.liamreardon.windmill.dev</string>
 	<key>APP_NAME</key>
-	<string>windmill</string>
+	<string>B33BOP</string>
 </dict>
 </plist>

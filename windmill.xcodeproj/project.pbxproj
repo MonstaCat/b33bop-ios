@@ -514,7 +514,6 @@
 				6B881A502450C59F001466CB /* Sources */,
 				6B881A512450C59F001466CB /* Frameworks */,
 				6B881A522450C59F001466CB /* Resources */,
-				A0D1AE0B9E540CE9C799A0E8 /* [CP] Copy Pods Resources */,
 				E192C888CEEF8EAEAC5323CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -588,23 +587,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A0D1AE0B9E540CE9C799A0E8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-windmill/Pods-windmill-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-windmill/Pods-windmill-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-windmill/Pods-windmill-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E192C888CEEF8EAEAC5323CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
