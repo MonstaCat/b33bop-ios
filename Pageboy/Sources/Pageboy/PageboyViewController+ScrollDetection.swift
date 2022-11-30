@@ -3,7 +3,7 @@
 //  Pageboy
 //
 //  Created by Merrick Sapsford on 13/02/2017.
-//  Copyright © 2018 UI At Six. All rights reserved.
+//  Copyright © 2022 UI At Six. All rights reserved.
 //
 
 import UIKit
@@ -48,6 +48,10 @@ extension PageboyViewController: UIPageViewControllerDelegate {
                                    didFinishAnimating finished: Bool,
                                    previousViewControllers: [UIViewController],
                                    transitionCompleted completed: Bool) {
+        defer {
+            expectedTransitionIndex = nil
+        }
+        
         guard pageViewControllerIsActual(pageViewController) else {
             return }
                 
@@ -88,6 +92,7 @@ extension PageboyViewController: UIScrollViewDelegate {
         guard let (newPosition, previousPosition) = calculateNewPagePosition(in: scrollView, currentIndex: currentIndex) else {
             return
         }
+        
         // do not continue if a page change is detected
         let didDetectNewPage = detectNewPageIndexIfNeeded(pagePosition: newPosition,
                                                           scrollView: scrollView)
@@ -165,6 +170,5 @@ extension PageboyViewController: UIScrollViewDelegate {
         if autoScroller.restartsOnScrollEnd {
             autoScroller.restart()
         }
-        expectedTransitionIndex = nil
     }
 }

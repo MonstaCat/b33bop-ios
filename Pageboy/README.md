@@ -6,25 +6,19 @@
     <a href="https://github.com/uias/Pageboy">
         <img src="https://github.com/uias/Pageboy/workflows/Build/badge.svg" />
     </a>
-    <img src="https://img.shields.io/badge/Swift-5-orange.svg?style=flat" />
-    <a href="https://cocoapods.org/pods/Pageboy">
-        <img src="https://img.shields.io/cocoapods/v/Pageboy.svg" alt="CocoaPods" />
-    </a>
-	<a href="https://cocoapods.org/pods/Pageboy">
-        <img src="https://img.shields.io/cocoapods/p/Pageboy.svg" alt="Platforms" />
-    </a>
-	<a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
-    </a>
+    <img src="https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white" />
 	<a href="https://github.com/uias/Pageboy/releases">
         <img src="https://img.shields.io/github/release/uias/Pageboy.svg" />
+    </a>
+    <a href="https://swift.org/package-manager/">
+        <img src="https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg" />
     </a>
 </p>
 
 **TL;DR** *UIPageViewController done properly.*
 
 ## ⭐️ Features
-- [x] Simplified data source management & enhanced delgation.
+- [x] Simplified data source management & enhanced delegation.
 - [x] Dynamically insert & remove pages.
 - [x] Infinite scrolling support.
 - [x] Automatic timer-based page transitioning.
@@ -34,8 +28,12 @@
 Pageboy requires iOS 9 / tvOS 10; and is compatible with Swift 5.
 
 ## 📲 Installation
+
+### Swift Package Manager
+Pageboy is compatible with [Swift Package Manager](https://swift.org/package-manager) and can be integrated via Xcode.
+
 ### CocoaPods
-Pageboy is available through [CocoaPods](https://cocoapods.org):
+Pageboy is also available through [CocoaPods](https://cocoapods.org):
 ```ruby
 pod 'Pageboy', '~> 3.6'
 ```
@@ -94,7 +92,7 @@ About to embark on a transition to a new page.
 ```swift
 func pageboyViewController(_ pageboyViewController: PageboyViewController,
                            willScrollToPageAt index: Int,
-                           direction: NavigationDirection,
+                           direction: PageboyViewController.NavigationDirection,
                            animated: Bool)
 ```
 
@@ -104,7 +102,7 @@ Scrolled to a relative position along the way transitioning to a new page.
 ```swift
 func pageboyViewController(_ pageboyViewController: PageboyViewController,
                            didScrollTo position: CGPoint,
-                           direction: NavigationDirection,
+                           direction: PageboyViewController.NavigationDirection,
                            animated: Bool)
 ```
 
@@ -114,7 +112,7 @@ Successfully completed a scroll transition to a page.
 ```swift
 func pageboyViewController(_ pageboyViewController: PageboyViewController,
                            didScrollToPageAt index: Int,
-                           direction: NavigationDirection,
+                           direction: PageboyViewController.NavigationDirection,
                            animated: Bool)
 ```
 
@@ -154,7 +152,7 @@ viewControllers.insert(UIViewController(), at: index)
 pageViewController.insertPage(at: index)
 ```
 
-*The default behaviour after inserting or deleting a page is to scroll to the update location, this however can be configured by passing a  `PageUpdateBehavior` value other than `.scrollToUpdate`.*
+*The default behavior after inserting or deleting a page is to scroll to the update location, this however can be configured by passing a  `PageUpdateBehavior` value other than `.scrollToUpdate`.*
 
 ## ⚡️ Other Extras
 
@@ -166,7 +164,7 @@ pageViewController.insertPage(at: index)
 - `.parentPageboy` - Access the immediate parent `PageboyViewController` from any child view controller.
 
 ### Animated Transitions
-Pageboy also provides custom transition support for **animated transitions**. This can be customised via the `.transition` property on `PageboyViewController`.
+Pageboy also provides custom transition support for **animated transitions**. This can be customized via the `.transition` property on `PageboyViewController`.
 
 ```swift
 pageboyViewController.transition = Transition(style: .push, duration: 1.0)
